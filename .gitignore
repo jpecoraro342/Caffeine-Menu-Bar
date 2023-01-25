@@ -3,6 +3,9 @@
 .AppleDouble
 .LSOverride
 
+# Xcode 
+xcuserdata
+
 # Icon must end with two \r
 Icon
 

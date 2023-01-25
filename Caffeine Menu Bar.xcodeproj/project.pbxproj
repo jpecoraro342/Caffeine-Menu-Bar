@@ -10,8 +10,8 @@
 		15ED5E2B29809615001FECFF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ED5E2A29809615001FECFF /* main.swift */; };
 		15ED5E2F29809616001FECFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15ED5E2E29809616001FECFF /* Assets.xcassets */; };
 		15ED5E3229809616001FECFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15ED5E3129809616001FECFF /* Preview Assets.xcassets */; };
-		15ED5E3A298096F0001FECFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ED5E39298096F0001FECFF /* AppDelegate.swift */; };
 		15ED5E3C29809735001FECFF /* Caffeine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ED5E3B29809735001FECFF /* Caffeine.swift */; };
+		15ED5E3E29809B3B001FECFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15ED5E3D29809B3B001FECFF /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +20,8 @@
 		15ED5E2E29809616001FECFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15ED5E3129809616001FECFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		15ED5E3329809616001FECFF /* Caffeine_Menu_Bar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Caffeine_Menu_Bar.entitlements; sourceTree = "<group>"; };
-		15ED5E39298096F0001FECFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15ED5E3B29809735001FECFF /* Caffeine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caffeine.swift; sourceTree = "<group>"; };
+		15ED5E3D29809B3B001FECFF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +54,11 @@
 		15ED5E2929809615001FECFF /* Caffeine Menu Bar */ = {
 			isa = PBXGroup;
 			children = (
+				15ED5E3D29809B3B001FECFF /* Info.plist */,
 				15ED5E2A29809615001FECFF /* main.swift */,
 				15ED5E2E29809616001FECFF /* Assets.xcassets */,
 				15ED5E3329809616001FECFF /* Caffeine_Menu_Bar.entitlements */,
 				15ED5E3029809616001FECFF /* Preview Content */,
-				15ED5E39298096F0001FECFF /* AppDelegate.swift */,
 				15ED5E3B29809735001FECFF /* Caffeine.swift */,
 			);
 			path = "Caffeine Menu Bar";
@@ -132,6 +132,7 @@
 			files = (
 				15ED5E3229809616001FECFF /* Preview Assets.xcassets in Resources */,
 				15ED5E2F29809616001FECFF /* Assets.xcassets in Resources */,
+				15ED5E3E29809B3B001FECFF /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +143,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15ED5E3A298096F0001FECFF /* AppDelegate.swift in Sources */,
 				15ED5E3C29809735001FECFF /* Caffeine.swift in Sources */,
 				15ED5E2B29809615001FECFF /* main.swift in Sources */,
 			);
