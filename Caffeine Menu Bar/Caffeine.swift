@@ -12,6 +12,8 @@ class Caffeine {
     var caffeinateProcess: Process?
     
     init() {
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        
         refreshUI()
     }
     
@@ -33,18 +35,15 @@ class Caffeine {
         // Display sleep?
         // others?
         
+        // TODO: Add a way to kill all running caffeine processes
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "Q"))
 
         statusItem.menu = menu
     }
     
     func updateStatusIcon() {
-        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-        
-        let imageName = "cup.and.saucer.fill"
-        statusItem.button?.image = NSImage(systemSymbolName: imageName, accessibilityDescription: "Toggle Wake State")
-        
-        // TODO: change this to a "hot coffee" when caffeine is active
+        // TODO: Change to filled image for more weight?
+        statusItem.button?.image = caffeinateProcess == nil ? NSImage(named: "coffee-cup-cold-white") : NSImage(named: "coffee-cup-hot-white")
     }
     
     func refreshUI() {

@@ -56,10 +56,10 @@
 			children = (
 				15ED5E3D29809B3B001FECFF /* Info.plist */,
 				15ED5E2A29809615001FECFF /* main.swift */,
+				15ED5E3B29809735001FECFF /* Caffeine.swift */,
 				15ED5E2E29809616001FECFF /* Assets.xcassets */,
 				15ED5E3329809616001FECFF /* Caffeine_Menu_Bar.entitlements */,
 				15ED5E3029809616001FECFF /* Preview Content */,
-				15ED5E3B29809735001FECFF /* Caffeine.swift */,
 			);
 			path = "Caffeine Menu Bar";
 			sourceTree = "<group>";
