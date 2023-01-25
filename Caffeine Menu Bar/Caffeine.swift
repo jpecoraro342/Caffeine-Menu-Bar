@@ -25,9 +25,6 @@ class Caffeine {
         let caffeinateMenuItem = NSMenuItem(title: title, action: #selector(toggleCaffeination), keyEquivalent: "")
         caffeinateMenuItem.target = self
         
-        menu.addItem(caffeinateMenuItem)
-        menu.addItem(NSMenuItem.separator())
-        
         // TODO: Add more menu items
         // Caffeinate for 1 hour
         // Caffeinate for 3 hours
@@ -35,7 +32,13 @@ class Caffeine {
         // Display sleep?
         // others?
         
-        // TODO: Add a way to kill all running caffeine processes
+        // TODO: If I remove this I can sandbox the app again
+        let killallMenuItem = NSMenuItem(title: "Terminate All", action: #selector(suspendAllCaffeinateTasks), keyEquivalent: "")
+        killallMenuItem.target = self
+        
+        menu.addItem(caffeinateMenuItem)
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(killallMenuItem)
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "Q"))
 
         statusItem.menu = menu
@@ -77,7 +80,7 @@ class Caffeine {
     
     func displayAlert(error: Error) {
         let alert = NSAlert()
-        alert.messageText = "Unable to Caffeinate"
+        alert.messageText = "Unable to Run Command"
         alert.informativeText = error.localizedDescription
         alert.addButton(withTitle: "Ok")
         alert.alertStyle = .warning
@@ -87,5 +90,21 @@ class Caffeine {
     func suspendTasks() {
         caffeinateProcess?.interrupt()
         caffeinateProcess = nil
+    }
+    
+    @objc func suspendAllCaffeinateTasks() {
+        suspendTasks()
+        let killallCaffeinate = Process();
+        killallCaffeinate.launchPath = "/usr/bin/killall"
+        killallCaffeinate.arguments = ["caffeinate"]
+        
+        do {
+            try killallCaffeinate.run()
+            killallCaffeinate.waitUntilExit()
+        } catch {
+            displayAlert(error: error)
+        }
+        
+        refreshUI()
     }
 }
