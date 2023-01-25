@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Caffeine Menu Bar</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>x86_64</string>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>D9BE44B807D674EA970F7CAEF9019901CB63A0BC</string>
+				<key>dateExpires</key>
+				<string>2/1/27</string>
+				<key>type</key>
+				<string>Cloud Managed Developer ID Application</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>com.apple.security.app-sandbox</key>
+				<false/>
+				<key>com.apple.security.files.user-selected.read-only</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>Caffeine Menu Bar.app</string>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>CX87MDXJNH</string>
+				<key>name</key>
+				<string>Joseph Pecoraro</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>0.1</string>
+		</dict>
+	</array>
+</dict>
+</plist>
